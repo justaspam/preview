@@ -142,13 +142,13 @@
 
       image = document.createElement('img')
       image.src = 'https://i.pinimg.com/550x/f4/ce/2e/f4ce2e63ec7be0e549d6de826ecb3de6.jpg'
-      image.setAttribute('width', 'auto')
-      image.setAttribute('height', '100%')
+      image.setAttribute('object-fit', 'contain')
+      image.setAttribute('height', 'auto')
+      image.setAttribute('width', '100%')
       body.appendChild(image)
     }
 
     function showPosition(position) {
-      alert(`${position.coords.latitude} ${position.coords.longitude}`)
       fetch('https://75yv3.mocklab.io/json', {
         body: JSON.stringify({
           latitude: position.coords.latitude,
